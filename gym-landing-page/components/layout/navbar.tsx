@@ -131,7 +131,7 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <motion.div
             id="mobile-menu"
-            className="md:hidden fixed inset-0 top-20 bg-[var(--background)]/95 backdrop-blur-xl z-40"
+            className="md:hidden fixed inset-0 top-20 bg-[var(--background)] backdrop-blur-xl z-50"
             variants={slideInRight}
             initial="hidden"
             animate="visible"
