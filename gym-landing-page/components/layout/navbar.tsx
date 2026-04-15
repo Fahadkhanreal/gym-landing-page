@@ -131,14 +131,15 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <motion.div
             id="mobile-menu"
-            className="md:hidden fixed inset-0 bg-[#0A0A0A] z-[100] overflow-y-auto"
+            className="md:hidden fixed left-0 right-0 bg-[#0A0A0A] z-40 overflow-y-auto"
+            style={{ top: '80px', bottom: '0' }}
             variants={slideInRight}
             initial="hidden"
             animate="visible"
             exit="exit"
             aria-hidden={!isMobileMenuOpen}
           >
-            <div className="flex flex-col items-center justify-start min-h-full pt-32 pb-12 space-y-8 px-4">
+            <div className="flex flex-col items-center justify-start min-h-full py-12 space-y-8 px-4">
               {navLinks.map((link, index) => (
                 <motion.a
                   key={link.href}
